@@ -1,5 +1,5 @@
 class Apartment
-  attr_reader :number, :monthly_rent, :rooms
+  attr_reader :monthly_rent, :rooms # :number
 
   def initialize(args={})
     @number = args.fetch(:number, 0)
@@ -20,6 +20,6 @@ class Apartment
   end
 
   def bedroom_count
-    rooms.select { |room| room.name == "bedroom" }.count
+    rooms.count { |room| room.name == "bedroom" }
   end
 end

@@ -1,6 +1,6 @@
 class Room
 
-  attr_reader :sqft, :window
+  attr_reader :sqft#, :window
   attr_accessor :name
   def initialize(args={})
     @name = args.fetch(:name, "bedroom")
