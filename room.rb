@@ -1,5 +1,5 @@
 class Room
-	attr_reader :sqft, :window_count
+	attr_reader :sqft
 	attr_accessor :name
 
 	def initialize( args = {} )

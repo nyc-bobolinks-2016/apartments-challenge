@@ -1,5 +1,5 @@
 class Building
-	attr_reader :address, :apartments
+	attr_reader :apartments
 	def initialize( args = {} )
 		@address = args.fetch(:address)
 		@apartments = args.fetch(:apartments)
