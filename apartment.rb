@@ -1,7 +1,7 @@
 require_relative 'apartment_module'
 
 class Apartment
-	include Apartments
+	include ApartmentModule
 
 	attr_accessor :number, :monthly_rent
 	attr_reader :rooms

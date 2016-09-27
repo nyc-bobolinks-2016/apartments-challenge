@@ -1,4 +1,4 @@
-module Building
+module BuildingModule
 
 	def total_room_count
 		self.apartments.reduce(0){|sum, apartment| sum + apartment.room_count }

@@ -1,4 +1,4 @@
-module Apartments
+module ApartmentModule
 
 	def room_count
 		self.rooms.length
