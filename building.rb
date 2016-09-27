@@ -8,11 +8,11 @@ class Building
   end
 
   def total_room_count
-    apartments.inject(0) { |sum, apartments| sum + apartments.room_count }
+    apartments.inject(0) { |sum, apartment| sum + apartment.room_count }
   end
 
   def total_monthly_revenue
-    apartments.inject(0) { |sum, apartments| sum + apartments.monthly_rent }
+    apartments.inject(0) { |sum, apartment| sum + apartment.monthly_rent }
   end
 
   def apartments_by_rent
@@ -24,7 +24,7 @@ class Building
   end
 
   def total_sqft
-    apartments.inject(0) { |sum, apartments| sum + apartments.total_sqft }
+    apartments.inject(0) { |sum, apartment| sum + apartment.total_sqft }
   end
 
 end

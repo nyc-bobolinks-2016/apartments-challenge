@@ -6,7 +6,11 @@ class Room
   def initialize(args = {})
     @name = args.fetch(:name, 'bedroom')
     @sqft = args.fetch(:sqft, 120)
-    @window_count = args.fetch(:window_count) { rand(0..2) }
+    @window_count = args.fetch(:window_count) { random_windows }
+  end
+
+  def random_windows
+  	rand(0..2)
   end
 
 end

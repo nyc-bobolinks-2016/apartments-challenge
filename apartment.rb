@@ -5,17 +5,17 @@ class Apartment
   attr_reader :monthly_rent, :rooms
 
   def initialize(args = {})
-    @number = args.fetch(:number)
-    @rooms = args.fetch(:rooms)
+    @number = args.fetch(:number, "")
+    @rooms = args.fetch(:rooms, 0)
     @monthly_rent = args.fetch(:monthly_rent, 1000)
   end
 
   def total_sqft
-    rooms.inject(0) { |sum, rooms| sum + rooms.sqft }
+    rooms.inject(0) { |sum, room| sum + room.sqft }
   end
 
   def price_per_sqft
-    (monthly_rent / total_sqft).round(1)
+    monthly_rent / total_sqft.to_f
   end
 
   def room_count
